@@ -4,7 +4,7 @@ const fetch = require('node-fetch')
 
 var path = require('path')
 const express = require('express')
- //const mockAPIResponse = require('./mockAPI.js')
+ const mockAPIResponse = require('./mockAPI.js')
 var bodyParser = require('body-parser')
 var cors = require('cors')
 
@@ -46,7 +46,7 @@ app.get('/test', function (req, res) {
 })
 
 app.post('/api', async function(req, res) {
-    input = req.body.url;
+    const input = req.body.url;
     console.log("input url ---- > " + input);
     const apiUrl = `${url}key=${apiKey}&url=${input}&lang=en`
 
