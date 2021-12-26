@@ -30,7 +30,18 @@ function handleSubmit(event) {
         }
      }
 
-     postRequest('/api',formText)
+     postRequest('http://localhost:8081/api',{url: formText}).then(
+        (res)=>{
+          document.getElementById("agreement").innerHTML = `agreement: ${res.agreement}`
+          document.getElementById("confidence").innerHTML = `confidence: ${res.confidence}`
+          document.getElementById("irony").innerHTML = `irony: ${res.irony}`
+          document.getElementById("model").innerHTML = `model: ${res.model}`
+          document.getElementById("score_tag").innerHTML = `score_tag: ${res.score_tag}`              
+
+        }
+
+
+     )
    //  .then(res => {
       //  console.log(res)
      //   return res.json()
