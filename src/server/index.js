@@ -48,8 +48,8 @@ const apiKey = process.env.KEY
 const url = "https://api.meaningcloud.com/sentiment-2.1"
 console.log("apiKey ---- > " +apiKey)
 app.post('/api', async function(req, res) {
-    console.log("req.body ---- > " +req.body.url)
-    const input = req.body.url;
+    console.log("req.body ---- > " +req.body.formText)
+    const input = req.body.formText;
     console.log("input url ---- > " + input);
     const apiUrl = `${url}?key=${apiKey}&url=${input}&lang=en`
 

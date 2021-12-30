@@ -1,5 +1,14 @@
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px 40px;
+}
+.title {
+    display: flex;
+    font-size: 22px;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    color: rgb(12, 12, 12);
+    
 }

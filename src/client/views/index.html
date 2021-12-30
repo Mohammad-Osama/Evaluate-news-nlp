@@ -13,16 +13,18 @@
     <body>
 
         <header>
-            <div class="">
+            <div class="title">
                 Sentiment Analysis API
             </div>
-            <div class="">
+            <!-- <div class="">
                 navigation
-            </div>
+            </div> -->
+            
         </header>
 
         <main>
             <section>
+
                 <form class="" onsubmit="return Client.handleSubmit(event)">
                     <input id="url" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
                     <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return handleSubmit(event)">
@@ -32,17 +34,23 @@
             <section>
                 <strong> Results:</strong>
                 <div id="results">
+                    <div id="input"></div>
                     <div id="agreement"></div>
                     <div id="confidence"></div>
                     <div id="irony"></div>
                     <div id="model"></div>
                     <div id="score_tag"></div>
+                    <strong> Status </strong>
+                    <div id="code"></div>
+                    <div id="credits"></div>
+                    <div id="msg"></div>
+                    <div id="remaining_credits"></div>
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>This is a footer</p>
+            <p>Developed by Mohammad Osama</p>
         </footer>
 
     </body>
