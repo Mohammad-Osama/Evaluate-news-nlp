@@ -4,9 +4,9 @@ function handleSubmit(event) {
     // check what text was put into the form field
     let formText = document.getElementById('url').value
 
-    Client.checkForName(formText)
+    if  (Client.validURL(formText)) 
 
-    console.log("::: Form Submitted :::")
+    {console.log("::: Form Submitted :::")
 
     const postRequest = async ( url = ' ' , data = {} ) => {
           console.log ('post data----> ', data )
@@ -28,6 +28,9 @@ function handleSubmit(event) {
         catch (error) {
             console.log ('error---- > ', error)
         }
+     }}
+     else {
+       alert ("Not a valid Url")
      }
 
      postRequest('http://localhost:8081/api',{url: formText}).then(
