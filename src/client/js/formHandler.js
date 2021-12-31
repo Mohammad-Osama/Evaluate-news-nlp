@@ -1,4 +1,7 @@
-function handleSubmit(event) {
+   /* udacity-fend-webpack-sass repo 
+      was used as a starter code for this project */ 
+
+function handleSubmit(event) {  
     event.preventDefault()
 
     // check what text was put into the form field
@@ -46,7 +49,7 @@ function handleSubmit(event) {
            document.getElementById("code").innerHTML = `code: ${recieved.status.code}`
            document.getElementById("credits").innerHTML = `credits: ${recieved.status.credits}`
            document.getElementById("msg").innerHTML = `msg: ${recieved.status.msg}`
-           document.getElementById("code").innerHTML = `code: ${recieved.status.remaining_credits}`              
+           document.getElementById("remaining_credits").innerHTML = `remaining_credits: ${recieved.status.remaining_credits}`              
  
          } )
      //}
